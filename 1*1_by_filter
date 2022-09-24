@@ -1,0 +1,6 @@
+(B,F,H,W)
+NB: B= batches , F=filters , H= height , W= Width
+(B,N,H,W) 
+same as but here N is filter 
+
+difference is , 1*1 conv is handy for reducing dimention or channel 
