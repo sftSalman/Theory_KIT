@@ -1,0 +1,9 @@
+why normalization : 
+The goal of normalization is to make every datapoint have the same scale so each feature is equally important. 
+
+Min-Max Normalization
+Min-max normalization is one of the most common ways to normalize data. For every feature, the minimum value of that feature gets transformed into a 0, the maximum value gets transformed into a 1, and every other value gets transformed into a decimal between 0 and 1.
+
+For example, if the minimum value of a feature was 20, and the maximum value was 40, then 30 would be transformed to about 0.5 since it is halfway between 20 and 40. The formula is as follows:
+
+#Min-max normalization has one fairly significant downside: it does not handle outliers very well#
