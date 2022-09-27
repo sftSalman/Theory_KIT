@@ -15,3 +15,20 @@ Z-score normalization is a strategy of normalizing data that avoids this outlier
 
 
 source link: https://www.codecademy.com/article/normalization
+
+127.5 = 255 / 2. Pixels are frequently represented as colors using a range from 0-255. This is exactly the middle of that range. So every pixel color is being adjusted to be between -1 and 1...
+
+This is exactly correct.
+
+but why?
+
+Input normalization is a common technique in machine learning. This specific model was trained with input value range -1 to 1, so we should normalize the inference input to the same range to achieve best result.
+
+To give some intuition, what will go wrong if the input isn't normalized to -1 to 1:
+
+For example, if we accidentally set IMAGE_MEAN=0.0f & IMAGE_STD = 255.0f, it will normalize the input to 0 to 1. The model will still "see" the image but everything become brighter. The accuracy may drop a bit
+If we don't normalize but simply converting uint8 to float, the value range is 0~255 when expecting -1~1. The model may "see" a super bright / white image. The accuracy may significantly drop or doesn't work at all.
+The range can be arbitrary. -1~1 and 0~1 are often used. The point is the same normalization should be applied to both training & inference.
+
+
+source: https://stackoverflow.com/questions/57963341/why-does-the-tensorflow-lite-example-use-image-mean-and-image-std-when-adding-pi
