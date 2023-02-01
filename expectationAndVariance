@@ -1,0 +1,17 @@
+Expectation of a Random Variable: Expectation of a Random Variable
+is denoted by E(X) and represents an 'average' value of the random
+variable.
+For discrete random variable, E(x) = ∑xp(x)
+For continuous random variable, E(x) = ∫𝐿𝑈 𝑥𝑓(𝑥)𝑑𝑥The expectation describes the average value and
+the variance describes the spread (amount of variability) around the expectation.
+
+
+Variance: Variance measures how far a set of numbers are spread out
+from their average value.
+For discrete random variable,
+V(x) = E(x2) – (E(x))2 = ∑x2p(x) – (∑xp(x))2
+For continuous random variable,
+V(x) = E(x2) – (E(x))2 = ∫𝐿𝑈 𝑥2𝑓(𝑥)𝑑𝑥 – (∫𝐿𝑈 𝑥𝑓(𝑥)𝑑𝑥)2
+Standard deviation: Standard deviation is the square root of the variance.
+SD(x) = √𝑉(𝑥)
+
