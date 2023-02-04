@@ -1,0 +1,50 @@
+#https://medium.com/analytics-vidhya/mean-normalization-and-feature-scaling-a-simple-explanation-3b9be7bfd3e8
+
+
+Mean Normalization and Feature Scaling — A simple explanation
+The concept of Mean Normalization and Feature Scaling is least addressed, to say the least. So, by the end of this article, you will be clear with these two concepts.
+
+To understand these two concepts we must first answer few questions.
+
+What is Feature Scaling?
+What is Mean Normalization?
+When do we use these concepts?
+Why do we need these techniques?
+Let’s go over each of these questions one by one.
+
+1. What is Feature Scaling?
+Feature Scaling is the process of bringing all of the features of a Machine Learning problem to a similar scale or range. The definition is as follows
+
+Feature scaling is a method used to normalize the range of independent variables or features of data.
+
+Feature scaling can have a significant effect on a Machine Learning model’s training efficiency and can improve the time taken to train a model. The specifics will be discussed below.
+
+2. What is Mean Normalization?
+Mean Normalization is a way to implement Feature Scaling. What Mean normalization does is that it calculates and subtracts the mean for every feature. A common practice is also to divide this value by the range or the standard deviation.
+
+
+Image by author
+When the same process is done and the standard deviation is used as the denominator then this process is called Standardization
+
+
+Image by author
+3. When do we use these concepts?
+Generally, Feature Scaling is used when the features do not have the same range of values. To explain this let us take an example of housing prices. In this problem, there might be many features to consider, but let us take two of them for simplicity.
+
+
+Image by author
+Now, the range of x1 can be from 2 to 5 and the range of x2 can be from 2500–5000. Now when we look at the ranges, we can see that there is a huge difference. This difference can slow down the learning of a model.
+
+4. Why do we need these techniques?
+Now to the most important question, Why do we need these concepts and techniques? It has been partially answered in the previous section. To discuss in detail we need to understand a data visualization graph called Contours.
+
+Contour plots are a way to show a three-dimensional surface on a two-dimensional plane.
+
+
+source: deeplearning.ai | Andrew Ng
+When we take a look at the above images we can see that the unnormalized contour is skewed and takes up an oval shape. The image next to it shows a normalized contour which takes up the shape of a circle and is evenly spaced.
+
+When we apply Gradient Descent in both situations, it is seen that Gradient Descent converges to the minimum faster if the input is normalized. Whereas, if the input is not normalized, Gradient Descent takes up a lot of steps before it converges to a minimum, which can slow down the learning process of the model.
+
+Conclusion
+To summarize, Gradient Descent converges to a minimum faster which is directly related to the learning of the model, if the inputs are normalized. Feature Scaling is advised if the range of the features vastly differ.
